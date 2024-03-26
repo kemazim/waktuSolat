@@ -1,0 +1,23 @@
+<body>
+    <div class="row">
+      <div class="container">
+        <div class="upper-data">
+          <div class="date">
+            <div class="currentDate">Current Date: {{ time | date: 'dd/MM/yyyy' }} </div>
+            <div class="currentTime">Current Time: {{ time | date: 'HH:mm:ss' }}</div>            
+          </div>
+          <div class="countdown">
+            <div class="label">Next upcoming prayer times</div>
+            <div class="time">{{prayerCountdown.name}} : {{prayerCountdown.countdown}}</div>
+          </div>
+        </div>
+  
+        <div class="lower-data">
+          <div class="prayer-time" *ngFor="let prayerTime of prayerTimes">
+            {{ prayerTime.name }}: {{ prayerTime.time.hours }}:{{ prayerTime.time.minutes }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  
