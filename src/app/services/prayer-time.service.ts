@@ -6,7 +6,7 @@ import { PrayerTimes } from 'src/app/model/prayerTimes';
   providedIn: 'root'
 })
 export class PrayerTimeService {
-  private url: string = "http://mpt.i906.my/mpt.json?";
+  private url: string = "https://mpt.i906.my/mpt.json?";
   private urlJakim: string = "https://www.e-solat.gov.my/index.php?r=esolatApi/takwimsolat";
 
   constructor(private http: HttpClient) { }
